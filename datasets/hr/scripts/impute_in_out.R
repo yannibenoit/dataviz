@@ -145,10 +145,17 @@ clear <- function(left,out_date){
 years <- mapply(FUN=clear, RH$left, RH$Out)
 
 
+#Concatenation avec le dataset
+RH$Out = years
+
+
+
 ##########
 # EXPORT #
 ##########
 
 #Export en csv
-write.csv(RH, file = "~/Documents/HR_with_month.csv")
+write.csv(RH, file = "~/Documents/HR_with_month.csv",row.names = FALSE)
+
+
 
